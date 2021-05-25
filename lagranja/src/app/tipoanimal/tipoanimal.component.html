@@ -1,0 +1,52 @@
+<div class="container" >
+    <div class="row" >
+      <div class="col-8 offset-2" >
+    <form >
+  
+        <h2>{{title}}</h2>
+        
+        <div class="row" >
+            <div class="form-group col-8">
+              <label for="nombre">Nombre Tipo Animal</label>
+              <input type="number" name="nombre" class="form-control" [(ngModel)]="nombre">
+            </div>
+        </div>
+        <div class="row" >
+          <div class="form-group col-8">
+            <label for="peligrosidad">Peligrosidad</label>
+            <input type="radio" name="peligrosidad" class="form-control" [(ngModel)]="peligrosidad">ALTA
+            <input type="radio" name="peligrosidad" class="form-control" [(ngModel)]="peligrosidad">BAJA
+         
+        </div>
+      </div>
+      <br>
+      <div class="row" >
+        <div class="col-6" >
+          <button type="submit" name="crear" class="btn btn-primary" (click)="registrarTipoAnimal()">Crear Tipo Animal</button>
+        </div>
+      </div>
+    
+  </form>
+  
+   <br>
+   <h4>Listado de Corrales</h4>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre Tipo Animal</th>
+        <th scope="col">Peligrosidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of tiposanimales; let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{t.nombre}}</td>
+        <td>{{t.peligrosidad}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+  </div>
+  </div>
+  </div>

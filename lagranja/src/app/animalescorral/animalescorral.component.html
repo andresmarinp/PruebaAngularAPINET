@@ -1,0 +1,26 @@
+<div class="container" >
+    <div class="row" >
+      <div class="col-8 offset-2" >
+        <form >
+            <h2>{{title}}</h2>
+
+            <div class="row" >
+              <div class="form-group col-8">
+                <label for="idcorral">Corral</label>
+                <select class="form-control" [(ngModel)]="idcorral">
+                  <option *ngFor="let c of corrales; let i=index" value={{c.idcorral}}>{{c.nombre}}</option>
+                </select>
+              </div>
+          </div>
+    
+            <br>
+            <div class="row" >
+              <div class="col-8" >
+                <button type="submit" name="buscar" class="btn btn-primary" >Consultar</button>
+              </div>
+            </div>      
+      </form>
+    </div>
+    </div>
+  </div>
+  
